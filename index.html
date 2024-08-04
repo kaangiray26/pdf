@@ -17,8 +17,6 @@
   <meta property="og:image" content="/images/logo_compressed.png">
   <meta property="og:url" content="https://www.nocturne.rocks">
   <meta property="og:description" content="Your Free, Open-Source PDF Editor">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4228715284139659"
-    crossorigin="anonymous"></script>
   <script type="module" crossorigin src="/assets/index-8a3abcb4.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/@vue-e9c45a6b.js">
   <link rel="modulepreload" crossorigin href="/assets/vue-router-03e9557c.js">
@@ -33,10 +31,19 @@
 
 <body>
   <div id="app"></div>
-  
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+  <script defer>
+    (function () {
+        window.addEventListener("DOMContentLoaded", () => {
+            fetch("https://home.buzl.uk:8443/analytics/beacon", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                origin: window.location.origin,
+                path: window.location.pathname,
+              }),
+            });
+        });
+    })();
   </script>
 </body>
-
 </html>
